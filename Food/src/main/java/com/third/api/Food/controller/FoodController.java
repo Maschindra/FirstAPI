@@ -47,14 +47,14 @@ public class FoodController {
         return ResponseEntity.ok(foodItems1);
 
     }
-    @DeleteMapping("{id}")
-    public ResponseEntity<HttpStatus> deleteFoodById(@PathVariable("id") Long id){
-        FoodItems foodItems = foodRepo.findById(id)
-                .orElseThrow(()->new ResourceNotFoundException("Food not exist with this id : "+id));
-        foodRepo.deleteById(id);
-
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-    }
+//    @DeleteMapping("{id}")
+//    public ResponseEntity<HttpStatus> deleteFoodById(@PathVariable("id") Long id){
+//        FoodItems foodItems = foodRepo.findById(id)
+//                .orElseThrow(()->new ResourceNotFoundException("Food not exist with this id : "+id));
+//        foodRepo.deleteById(id);
+//
+//        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+//    }
 
 
 
